@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="10dp"
+    android:background="@drawable/colorback"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:text="ADD REMINDER"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_height="50dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/holo_blue_dark"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1.0">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/textcircle"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txtLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/textcircle"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="20dp"
+            android:layout_weight="0.7"
+            android:text="select location"
+            android:textColor="@android:color/black" />
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@drawable/picker"
+            android:onClick="btnSearchLocationClick"
+            android:layout_gravity="center_vertical"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="10dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:textColor="#000000"
+        android:text="range in meter from location"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/textcircle"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:padding="20dp"
+        android:textColor="@android:color/black"
+        android:inputType="number"
+        android:text="500"
+        android:hint="range from location"
+        android:id="@+id/etxtRange" />
+    <View android:layout_width="match_parent" android:layout_height="10dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:textColor="#000000"
+        android:text="message to remind"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/textcircle"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:padding="20dp"
+        android:textColor="@android:color/black"
+        android:inputType="textMultiLine"
+        android:hint="message to remind"
+        android:id="@+id/etxtMessage" />
+    <View android:layout_width="match_parent" android:layout_height="20dp" />
+    <Button android:textSize="18sp"
+        android:id="@+id/btnSaveReminder"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/buttondesign"
+        android:textColor="#002661"
+        android:onClick="btnSaveReminderClick"
+        android:text="Save Reminder" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
